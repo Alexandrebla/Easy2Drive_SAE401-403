@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgba(31, 191, 184, 0.17); /* Bleu turquoise avec 36% d'opacité */
+        }
+    </style>
+</head>
+<body>
+    <section class="container" style="margin-top: 30px;">
+
+        <div class="row" style="margin-top: 80px; margin-bottom: 30px;">
+            <p style="font-size: 45px;">Tous vos resultats d’examens et tests : </p>
+            <br>
+            <table class="custom-table">
+                <tr>
+                    <td class="cell">Cellule 1</td>
+                    <td class="large-cell">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell-2">Cellule 1</td>
+                    <td class="large-cell-2">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell">Cellule 1</td>
+                    <td class="large-cell">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell-2">Cellule 1</td>
+                    <td class="large-cell-2">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell">Cellule 1</td>
+                    <td class="large-cell">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell-2">Cellule 1</td>
+                    <td class="large-cell-2">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell">Cellule 1</td>
+                    <td class="large-cell">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell-2">Cellule 1</td>
+                    <td class="large-cell-2">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell">Cellule 1</td>
+                    <td class="large-cell">Cellule 2</td>
+                </tr>
+                <tr>
+                    <td class="cell-2">Cellule 1</td>
+                    <td class="large-cell-2">Cellule 2</td>
+                </tr>
+            </table>           
+        </div>
+
+        <!-- Section avec les boutons -->
+    <div class="row" style="margin-top: 80px; margin-bottom: 50px;">
+        <p style="font-size: 45px;">Voici un graphique montrant l’évolution de vos résultats :</p>
+        <div class="col-3"></div>
+        <div class="col-8">
+            <button class="button" onclick="showChart('total')">Depuis toujours</button>
+            <button class="button" onclick="showChart('month')">Ce mois-ci</button>
+            <button class="button" onclick="showChart('week')">Cette semaine</button>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+    <!-- Conteneur pour afficher les graphiques -->
+    <div class="row">
+        <div class="col-12">
+            <canvas id="chart7Days" width="800" height="400" style="display: none;"></canvas>
+            <canvas id="chart30Days" width="800" height="400" style="display: none;"></canvas>
+            <canvas id="chartTotal" width="800" height="400" style="display: block;"></canvas> <!-- Affichage par défaut -->
+        </div>
+    </div>
+    </section>
+</body>
+</html>
+
+
+
+<!-- <button class="button">Button</button>
+    <button class="button2">+</button>
+-->

@@ -1,0 +1,64 @@
+<app-navbar-admin></app-navbar-admin>
+    <section class="container">
+        <a href="/"><img src="Easy2Drive-removebg-preview.png" alt="logo de Easy2Drive" style="margin-left: 1050px;"></a>
+        <h1 style="font-size: 65px; text-align: center; margin-bottom: 80px;">Liste des étudiants</h1>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+                <button class="button">Ajouter un étudiant</button>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <button class="button">Modifier un étudiant</button>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <button class="button">Supprimer un étudiant</button>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <br>
+            <!-- <pre>{{ students | json }}</pre> -->
+            <table class="custom-table" style="margin-left: 42px;">               
+                <tr *ngFor="let student of students">
+                    <td class="cell1">
+                      <div class="cell-content">
+                        <span>{{ student.nom }} {{ student.prenom }}</span>
+                        <img src="Profile blanc.png" alt="done" width="100px" height="100px" style="margin: 0 20px;">
+                        <span>{{ student.id_etudiant }}</span>
+                        <span style="margin-left: 20px;">NPEH : {{ student.neph }}</span>
+                        <span style="margin-left: 20px;">{{ student.autoecole ? student.autoecole : 'Non attribué' }}</span>
+                        <span style="margin-left: 50px;">
+                          <button class="button2">v</button>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                <tr>
+                    <td class="cell2">
+                        <div class="cell-content">
+                            <span>Mamadou Sangare</span>
+                            <img src="Profile blanc.png" alt="done" width="100px" height="100px" style="margin: 0 20px;">
+                            <span>456982</span>
+                            <span style="margin-left: 20px;">NPEH : 741258935</span>
+                            <span style="margin-left: 20px;">Stych</span>
+                            <span style="margin-left: 50px;"><button class="button2">v</button></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cell3">
+                        <div class="cell-content">
+                            <span>Mamadou Sangare</span>
+                            <img src="Profile blanc.png" alt="done" width="100px" height="100px" style="margin: 0 20px;">
+                            <span>456982</span>
+                            <span style="margin-left: 20px;">NPEH : 741258935</span>
+                            <span style="margin-left: 20px;">Stych</span>
+                            <span style="margin-left: 50px;"><button class="button2">v</button></span>
+                        </div>
+                    </td>
+                </tr>                
+            </table>           
+        </div>
+    </section>

@@ -1,0 +1,15 @@
+Array
+(
+    [login_reçu] => eleve.test
+    [password_reçu] => etupass123
+    [user_trouvé] => Array
+        (
+            [id_personne] => 2
+            [prenom] => Émile
+            [nom] => Élève
+            [date_naissance] => 2000-05-15
+            [login] => eleve.test
+            [password] => $2y$10$Cw3.70Abb8rODXfSgpodVOoe6/UD1iFhvBITZuBAuVzLkUGB1KsY.
+        )
+
+)

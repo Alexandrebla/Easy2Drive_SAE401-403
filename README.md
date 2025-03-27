@@ -3,6 +3,26 @@
 **Easy2Drive** est une application web destinée à la gestion des élèves et des moniteurs d'une auto-école. Elle permet aux élèves de consulter leurs tests, de réserver des séances de code, et de gérer leur profil, tandis que les moniteurs et administrateurs peuvent gérer les réservations, les tests, et les utilisateurs.
 
 ---
+###Lien Figma : https://www.figma.com/design/BnygVPM2RJlhcWqmALb6lB/Maquette-SAE401?node-id=2480-949&t=2GlGCQ2589Shw1Un-1
+
+##Membres du groupe : 
+
+- Alexandre Hamon
+- Marwan Seghiri
+- Yanis Buhot
+- Théo Chaput
+ 
+Classe > TD1 
+Groupe > TPB
+
+
+##Code de connexion : 
+###Pour l'élève : login : eleve.test
+                  password : etupass123
+
+###Pour l'admin : login : admin.test
+                  password : adminpass123
+
 
 ## Fonctionnalités
 
@@ -12,12 +32,6 @@
 - **Gérer le profil** : Consulter et modifier les informations personnelles (nom, prénom, date de naissance, NEPH, etc.).
 - **Réserver une séance de code** : Choisir un créneau horaire pour passer le code.
 - **Déposer un avis** : Laisser un avis sur une séance ou un moniteur.
-
-### Pour les Moniteurs
-- **Consulter le profil** : Voir et modifier les informations personnelles.
-- **Consulter les séances** : Voir les séances planifiées avec les élèves.
-- **Gérer les réservations** : Valider ou annuler les réservations des élèves pour les séances de code.
-- **Consulter les avis** : Voir les avis laissés par les élèves.
 
 ### Pour les Administrateurs
 - **Gérer les élèves** : Ajouter, modifier ou supprimer un élève.

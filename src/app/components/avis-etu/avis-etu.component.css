@@ -1,0 +1,185 @@
+body {
+    background: linear-gradient(to right, #1FBFB8, #000000);
+    height: 100vh;
+    margin: 0;
+}
+
+.carre{
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 40px;
+    height: 600px;
+    width: 1370px;
+}
+
+div.actuelle{
+    background-color: white;
+    border: 2px black solid;
+    height: 200px;
+    width: 1300px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.inline-elements {
+    display: flex;
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    gap: 100px; /* Ajoute un espacement entre le bouton et le texte */
+    margin-top: 40px;
+}
+
+p.eval{
+    font-size: 35px;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+
+.etoial{
+    display: flex;
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    gap: 18px; /* Ajoute un espacement entre le bouton et le texte */
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.button {
+    background: linear-gradient(to bottom, black, #1FBFB8);
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    padding: 15px 40px;
+    width: 240px; /* Largeur du bouton */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 250px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+img.etoile{
+height: 162px;
+}
+
+.custom-table {
+width: 100%;
+border-collapse: separate; /* Permet d'appliquer border-radius */
+border-spacing: 0.2 2.5px; /* Ajoute un espace vertical de 10px entre les lignes */
+margin-left: 30px;
+}
+
+
+.custom-table td {
+padding: 10px;
+text-align: center;
+font-size: 18px;
+color: #ffffff;
+border: 2px solid black; /* Bordure noire de 4px autour des cellules */
+background-color: #1FBFB8; /* Bleu turquoise */
+border-radius: 10px; /* Arrondi de toutes les cellules */
+height: 70px;
+}
+
+.custom-table td.large-cell {
+width: 1000px; /* Ajuste la largeur de la cellule 2 */
+height: 200px;
+background-color: #ffffff; /* Bleu turquoise avec 36% d'opacité */
+}
+
+.custom-table td.large-cell-2 {
+width: 1000px; /* Ajuste la largeur de la cellule 2 */
+height: 100px;
+background-color: #ffffff; /* Bleu turquoise */
+color: black;
+}
+
+h1{
+text-align: center;
+margin-top: 10px;
+font-size: 60px;
+}
+
+/*Contenue com*/
+
+.large-cell {
+padding: 10px;
+vertical-align: middle;
+text-align: left;
+}
+
+.commentaire {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
+position: relative;
+color: black;
+}
+
+/* Section supérieure : Étoiles, Utilisateur, Temps */
+.top-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+/* Étoiles + Utilisateur */
+.stars-user {
+display: flex;
+align-items: center;
+}
+
+.stars {
+display: flex;
+gap: 0px;
+height: 80px;
+}
+
+.stars img {
+margin-right: -15px; /* Réduit l'espace entre les images */
+width: auto; /* Garde leur taille d'origine */
+height: 100%; /* Ajuste la hauteur des étoiles */
+}
+
+.username {
+margin-left: 10px;
+margin-top: 10px;
+font-weight: semi-bold;
+color: black;
+font-size: 30px;
+}
+
+/* Temps en haut à droite */
+.time {
+position: absolute;
+top: 0;
+right: 0;
+font-size: 0.9em;
+color: black;
+}
+
+/* Contenu centré */
+.content {
+flex-grow: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 10px;
+color: black;
+margin-top: 16px;
+}
+
+/* Section interactions en bas à droite */
+.interaction {
+align-self: flex-end;
+}
+
+

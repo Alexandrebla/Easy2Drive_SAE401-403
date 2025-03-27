@@ -1,0 +1,141 @@
+.custom-table {
+    margin-left: 100px;
+    font-size: 25px;
+    width: 90%; /* Ajuste la largeur de la table pour s'adapter */
+}
+
+.custom-table td {
+    padding: 15px;
+    font-size: 25px;
+    border: 1px solid black;
+    transition: transform 0.3s ease-in-out;
+    height: 100px; /* Augmente la hauteur des cellules */
+    max-height: 100px;
+    width: 400px; /* Augmente la largeur des cellules */
+    max-width: 400px;
+}
+
+.cell1 {
+    background-color: rgba(31, 191, 184, 0.36);
+}
+
+.cell2 {
+    background-color: rgba(31, 191, 184);
+}
+
+.cell3 {
+    background-color: rgba(31, 191, 184, 0.17);
+}
+
+.cell-content {
+    display: flex;
+    justify-content: center; /* Aligne horizontalement */
+    gap: 50px; /* Espacement entre les éléments */
+    align-items: center; /* Aligne verticalement au centre */
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+.cell-content img {
+    width: 100px; /* Augmente la taille des icônes */
+    height: 100px;
+}
+
+.button {
+    background: linear-gradient(to bottom, black, #1FBFB8);
+    color: white;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    padding: 15px 40px;
+    width: 350px; /* Augmentation de la largeur */
+    height: 80px; /* Augmentation de la hauteur */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Version plus petite */
+.button3 {
+    width: 250px; /* Largeur augmentée */
+    height: 50px; /* Hauteur légèrement augmentée */
+    font-size: 18px;
+}
+
+/* Bouton circulaire */
+.button2 {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+}
+
+.button2:hover {
+    transform: scale(1.3);
+}
+
+/* ✅ Fond assombri lors de l'ouverture d'un popup */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* ✅ Contenu du popup */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Animation d'apparition du popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ✅ Boutons dans le popup */
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ✅ Ajout d'un espacement pour le formulaire */
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+

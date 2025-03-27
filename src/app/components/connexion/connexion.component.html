@@ -1,0 +1,62 @@
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icons">
+        <button>
+          <i class="fas fa-home"></i>
+        </button>
+        <button>
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+      <div class="logo">
+        Easy<span>2</span>Drive
+      </div>
+    </div>
+  
+    <div class="title-container">
+      <h1>Se connecter</h1>
+    </div>
+  
+    <div class="main">
+      <div class="form-container">
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+          <input
+            placeholder="Identifiant"
+            type="text"
+            [(ngModel)]="login"
+            name="login"
+            required
+          />
+          <input
+            placeholder="Mot de passe"
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+          <button type="submit">Se connecter</button>
+        </form>
+  
+        <div class="forgot-password">
+          <a href="#">Mot de passe oublié ?</a>
+        </div>
+  
+        <button class="signup-button">
+          <a routerLink="/list_etu">S'inscrire</a>
+        </button>
+      </div>
+  
+      <div class="divider"></div>
+  
+      <div class="image-container">
+        <img
+          alt="Illustration of two people in a car with a cityscape background"
+          height="300"
+          width="400"
+          src="https://storage.googleapis.com/a1aa/image/CH_aZVHgF1eswNUzS4LNOQPXtDjUfa9wY494qpNS8iU.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</body>

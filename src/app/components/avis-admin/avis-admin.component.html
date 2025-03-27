@@ -1,0 +1,65 @@
+<body>
+    <app-navbar-admin></app-navbar-admin>
+    <section class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <p style="font-size: 75px; color: white; text-align: center; margin-top: 10px; margin-bottom: 50px;">
+                Tous les commentaires d'Easy2Drive
+            </p>
+            <br>
+            <table class="custom-table">
+                <tr *ngFor="let avisItem of avis">
+                    <td class="large-cell">
+                        <div class="commentaire">
+                            <div class="top-section">
+                                <div class="stars-user">
+                                    <span class="stars">
+                                        <img *ngFor="let star of getStars(avisItem.note)" 
+                                             src="Etoiles bleu.png" alt="etoile bleu">
+                                    </span>
+                                    <p class="username">Par {{ avisItem.nom_etudiant || 'Anonyme' }}</p>
+                                </div>
+                                <p class="time">{{ avisItem.date_depot }}</p>
+                            </div>
+                            <div class="content">
+                                <p>{{ avisItem.contenu }}</p>
+                            </div>
+                            <div class="interaction">
+                                <span>
+                                    <!-- ✅ Ajout du bouton Modifier qui ouvre un popup -->
+                                    <img src="Modifier noir.png" alt="Modifier noir" height="58px" 
+                                         style="margin-right: 5px; cursor: pointer;"
+                                         (click)="openPopup(avisItem)">
+
+                                    <img src="Like rouge.png" alt="Like rouge" height="48px" style="margin-right: 10px;">
+                                    <img src="Partager.png" alt="Partager" height="44px" style="margin-right: 10px;">
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>           
+        </div>
+    </section>
+
+    <!-- ✅ Ajout du popup pour modifier l'avis -->
+    <div class="popup" *ngIf="showPopup">
+        <div class="popup-content">
+            <h2>Gestion commentaires</h2>
+            <div class="comment-header">
+                <p>Commentaire de {{ selectedAvis.nom_etudiant || 'Anonyme' }}</p>
+                <p>Posté le {{ selectedAvis.date_depot }}</p>
+            </div>
+            <label>Corps du commentaire :</label>
+            <textarea [(ngModel)]="selectedAvis.contenu"></textarea>
+            <div class="popup-actions">
+                <label>Motif :</label>
+                <input type="text">
+                <button (click)="sendWarning()">Avertissement</button>
+                <p *ngIf="warningMessage" class="warning-text">{{ warningMessage }}</p>
+                <button (click)="deleteAvis(selectedAvis.id_avis)">Supprimer</button>
+            </div>
+            <button class="close-btn" (click)="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+</body>

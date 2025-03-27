@@ -1,0 +1,108 @@
+<app-navbar-admin></app-navbar-admin>
+
+<section class="container">
+    <a href="/"><img src="Easy2Drive-removebg-preview.png" alt="logo de Easy2Drive" style="margin-left: 1050px;"></a>
+    <h1 style="font-size: 65px; text-align: center; margin-bottom: 80px;">Liste des étudiants</h1>
+
+    <button (click)="openAddModal()" class="button" style="margin-bottom: 100px; margin-left: 480px;">Ajouter un étudiant</button>
+
+    <div class="container">
+        <!-- ✅ MODAL DE MODIFICATION -->
+<div *ngIf="isEditModalOpen" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Modifier un étudiant</h2>
+        <form (ngSubmit)="submitEditStudent()">
+            <label>Prénom :</label>
+            <input type="text" [(ngModel)]="selectedStudent.prenom" name="prenom" required />
+
+            <label>Nom :</label>
+            <input type="text" [(ngModel)]="selectedStudent.nom" name="nom" required />
+
+            <label>NEPH :</label>
+            <input type="text" [(ngModel)]="selectedStudent.neph" name="neph" required />
+
+            <label>Date d'inscription :</label>
+            <input type="date" [(ngModel)]="selectedStudent.date_inscription" name="date_inscription" required />
+
+            <label>ETG :</label>
+            <input type="number" [(ngModel)]="selectedStudent.etg" name="etg" required />
+
+            <label>Échecs ETG :</label>
+            <input type="number" [(ngModel)]="selectedStudent.echec_etg" name="echec_etg" required />
+
+            <div class="modal-buttons">
+                <button type="submit" class="btn btn-success">Modifier</button>
+                <button type="button" class="btn btn-danger" (click)="closeModals()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ✅ MODAL D'AJOUT -->
+<div *ngIf="isAddModalOpen" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Ajouter un étudiant</h2>
+        <form (ngSubmit)="submitStudent()">
+            <label>Prénom :</label>
+            <input type="text" [(ngModel)]="newStudent.prenom" name="prenom" required />
+
+            <label>Nom :</label>
+            <input type="text" [(ngModel)]="newStudent.nom" name="nom" required />
+
+            <label>NEPH :</label>
+            <input type="text" [(ngModel)]="newStudent.neph" name="neph" required />
+
+            <label>Date d'inscription :</label>
+            <input type="date" [(ngModel)]="newStudent.date_inscription" name="date_inscription" required />
+
+            <label>ETG :</label>
+            <input type="number" [(ngModel)]="newStudent.etg" name="etg" required />
+
+            <label>Échecs ETG :</label>
+            <input type="number" [(ngModel)]="newStudent.echec_etg" name="echec_etg" required />
+
+            <label>Login :</label>
+            <input type="text" [(ngModel)]="newStudent.login" name="login" required />
+
+            <label>Mot de passe :</label>
+            <input type="password" [(ngModel)]="newStudent.password" name="password" required />
+
+            <div class="modal-buttons">
+                <button type="submit" class="btn btn-success">Ajouter</button>
+                <button type="button" class="btn btn-danger" (click)="closeModals()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>
+    
+
+    <!-- Table des étudiants -->
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th class="cell1">ID</th>
+                <th class="cell1">Nom</th>
+                <th class="cell1">Prénom</th>
+                <th class="cell1">NEPH</th>
+                <th class="cell1">Date d'inscription</th>
+                <th class="cell1">ETG</th>
+                <th class="cell1">Échecs ETG</th>
+                <th class="cell1">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td class="cell2">{{ student.id_etudiant }}</td>
+                <td class="cell2">{{ student.nom }}</td>
+                <td class="cell2">{{ student.prenom }}</td>
+                <td class="cell2">{{ student.neph }}</td>
+                <td class="cell2">{{ student.date_inscription }}</td>
+                <td class="cell2">{{ student.etg }}</td>
+                <td class="cell2">{{ student.echec_etg }}</td>
+                <td class="cell2">
+                    <button (click)="openEditModal(student)" class="button3">Modifier</button>
+                    <button (click)="deleteStudent(student.id_etudiant)" class="button3">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
